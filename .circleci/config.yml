@@ -33,7 +33,7 @@ jobs:
               docker push ima8/example-nodejs-circle:latest
               docker push ima8/example-nodejs-circle:${CIRCLE_SH1}
           elif ["${CIRCLE_BRANCH}" == "staging"]; then
-              docker build -t ima8/example-nodejs-circle:latest
+              docker build -t ima8/example-nodejs-circle:latest .
               docker push ima8/example-nodejs-circle:latest
           else echo "this is ${CIRCLE_BRANCH}"
           fi
