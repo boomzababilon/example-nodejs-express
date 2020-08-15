@@ -25,7 +25,7 @@ jobs:
           command: |
               cp Dockerfile.production Dockerfile
               docker build -t ima8/example-nodejs-circle:latest .
-              docker build -t ima8/example-nodejs-circle:${CIRCLE_SH1} .
+              docker build -t ima8/example-nodejs-circle:${CIRCLE_SHA1} .
               docker push ima8/example-nodejs-circle:latest
               docker push ima8/example-nodejs-circle:${CIRCLE_SH1}
       - run: echo Done
