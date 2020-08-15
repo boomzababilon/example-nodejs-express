@@ -17,6 +17,11 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
       - run: npm install
+      - save_cache:
+             paths:
+              - node_modules
+              keys:
+                - v1-dependencies-{{ checksum "package.json" }}
       - run: npm run test
       - setup_remote_docker
       - run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
