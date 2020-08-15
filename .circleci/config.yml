@@ -31,7 +31,7 @@ jobs:
              docker build -t ima8/example-nodejs-circle:latest .
              docker build -t ima8/example-nodejs-circle:${CIRCLE_SHA1} .
              docker push ima8/example-nodejs-circle:latest
-             docker push ima8/example-nodejs-circle:${CIRCLE_SH1}
+             docker push ima8/example-nodejs-circle:${CIRCLE_SHA1}
             elif ["${CIRCLE_BRANCH}" == "staging"]; then
              docker build -t ima8/example-nodejs-circle:latest .
              docker push ima8/example-nodejs-circle:latest
