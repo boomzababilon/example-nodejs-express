@@ -46,13 +46,13 @@ jobs:
           name: "Build docker image and push to docker hub"
           command: |
             if [ "${CIRCLE_BRANCH}"] == "master" ]; then
-             docker build -t ima8/example-nodejs-circle:latest .
-             docker build -t ima8/example-nodejs-circle:${CIRCLE_SHA1} .
-             docker push ima8/example-nodejs-circle:latest
-             docker push ima8/example-nodejs-circle:${CIRCLE_SHA1}
+             docker build -t aoaoi0123/express:latest .
+             docker build -t aoaoi0123/express:${CIRCLE_SHA1} .
+             docker push aoaoi0123/express:latest
+             docker push aoaoi0123/express:${CIRCLE_SHA1}
             elif ["${CIRCLE_BRANCH}" == "staging"]; then
-             docker build -t ima8/example-nodejs-circle:latest .
-             docker push ima8/example-nodejs-circle:latest
+             docker build -t aoaoi0123/express:latest .
+             docker push aoaoi0123/express:latest
             else echo "this is ${CIRCLE_BRANCH}"
             fi
       - run:
